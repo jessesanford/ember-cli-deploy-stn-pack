@@ -1,13 +1,13 @@
 {
-  "name": "ember-cli-deploy-aws-pack",
+  "name": "ember-cli-deploy-stn-pack",
   "version": "0.1.1",
-  "description": "A pack of ember-cli-deploy plugins for implementing a simple AWS deploy approach.",
+  "description": "A pack of ember-cli-deploy plugins for implementing a simple AWS deploy approach with revision data.",
   "scripts": {},
-  "repository": "https://github.com/kpfefferle/ember-cli-deploy-aws-pack",
+  "repository": "https://github.com/therealjessesanford/ember-cli-deploy-stn-pack",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "Kevin Pfefferle",
+  "author": "Jesse Sanford",
   "license": "MIT",
   "devDependencies": {
     "ember-cli": "1.13.12",
@@ -22,7 +22,8 @@
     "ember-cli-deploy-cloudfront": "0.1.1",
     "ember-cli-deploy-gzip": "0.1.0",
     "ember-cli-deploy-manifest": "0.1.0",
-    "ember-cli-deploy-s3": "0.1.0"
+    "ember-cli-deploy-s3": "0.1.0",
+    "ember-cli-deploy-revision-data": "0.1.0"
   },
   "ember-addon": {
     "defaultBlueprint": "aws-deploy-config"
