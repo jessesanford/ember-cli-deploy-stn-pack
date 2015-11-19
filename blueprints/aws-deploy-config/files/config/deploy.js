@@ -17,6 +17,44 @@ module.exports = function(deployTarget) {
     }
   };
 
+  ENV['revision-data'] = {
+    // type: The type of Data Generator to be used.
+    // Default: 'file-hash' Alternatives: 'git-tag-commit', 'git-commit', 'version-commit'
+    // https://github.com/ember-cli-deploy/ember-cli-deploy-revision-data#type
+    type: 'file-hash'
+  }
+
+  switch (ENV['revision-data']['type']) {
+    case 'file-hash':
+      ENV['revision-data'].merge({
+        filePattern: 'index.html',
+        distDir: function(context) {
+          return context.distDir;
+        },
+        distFiles: function(context) {
+          return context.distFiles;
+        }
+      });
+    case 'git-tag-commit':
+      // No configurable options
+    case 'git-commit':
+      // No configurable options
+    case 'version-commit':
+      ENV['revision-data']['versionFile'] = 'package.json';
+  }
+
+  ENV.sentry {
+    publicUrl: 'https://your.awesome.site',
+    sentryUrl: 'https://sentry.your.awesome.site',
+    sentryOrganizationSlug: 'AwesomeOrg',
+    sentryProjectSlug: 'AwesomeProject',
+    sentryApiKey: 'awesomeApiKey'
+  };
+
+  ENV.slack = {
+    webhookURL: '<your-webhook-URI>'
+  };
+
   if (deployTarget === 'staging') {
     ENV.build.environment = 'production';
     ENV.s3.bucket = process.env.STAGING_BUCKET;

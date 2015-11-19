@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-stn-pack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A pack of ember-cli-deploy plugins for implementing a simple AWS deploy approach with revision data.",
   "scripts": {},
   "repository": "https://github.com/therealjessesanford/ember-cli-deploy-stn-pack",
@@ -23,7 +23,9 @@
     "ember-cli-deploy-gzip": "0.1.0",
     "ember-cli-deploy-manifest": "0.1.0",
     "ember-cli-deploy-revision-data": "0.1.0",
-    "ember-cli-deploy-s3": "0.1.0"
+    "ember-cli-deploy-slack": "0.0.3",
+    "ember-cli-deploy-s3": "0.1.0",
+    "ember-cli-deploy-sentry": "0.2.2"
   },
   "ember-addon": {
     "defaultBlueprint": "aws-deploy-config"
