@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-stn-pack",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A pack of ember-cli-deploy plugins for implementing a simple AWS deploy approach with revision data.",
   "scripts": {},
   "repository": "https://github.com/therealjessesanford/ember-cli-deploy-stn-pack",

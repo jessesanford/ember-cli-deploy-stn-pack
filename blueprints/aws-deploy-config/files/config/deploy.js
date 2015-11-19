@@ -26,15 +26,13 @@ module.exports = function(deployTarget) {
 
   switch (ENV['revision-data']['type']) {
     case 'file-hash':
-      ENV['revision-data'].merge({
-        filePattern: 'index.html',
-        distDir: function(context) {
+      ENV['revision-data']['filePattern'] = 'index.html';
+      ENV['revision-data']['distDir'] = function(context) {
           return context.distDir;
-        },
-        distFiles: function(context) {
+      };
+      ENV['revision-data']['distFiles'] = function(context) {
           return context.distFiles;
-        }
-      });
+      };
     case 'git-tag-commit':
       // No configurable options
     case 'git-commit':
