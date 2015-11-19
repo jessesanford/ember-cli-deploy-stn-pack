@@ -22,7 +22,7 @@ module.exports = function(deployTarget) {
     // Default: 'file-hash' Alternatives: 'git-tag-commit', 'git-commit', 'version-commit'
     // https://github.com/ember-cli-deploy/ember-cli-deploy-revision-data#type
     type: 'file-hash'
-  }
+  };
 
   switch (ENV['revision-data']['type']) {
     case 'file-hash':
@@ -43,7 +43,7 @@ module.exports = function(deployTarget) {
       ENV['revision-data']['versionFile'] = 'package.json';
   }
 
-  ENV.sentry {
+  ENV.sentry = {
     publicUrl: 'https://your.awesome.site',
     sentryUrl: 'https://sentry.your.awesome.site',
     sentryOrganizationSlug: 'AwesomeOrg',
